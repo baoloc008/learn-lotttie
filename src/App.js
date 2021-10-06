@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Lottie from 'react-lottie-player'
+import LottiePlayerLight from 'react-lottie-player/dist/LottiePlayerLight'
+import lottieJson from './line.json'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      hello
+      <Lottie
+        loop
+        animationData={lottieJson}
+        play
+        renderer="canvas"
+      />
+      <Lottie
+        loop
+        animationData={lottieJson}
+        play
+        renderer="svg"
+      />
+      <LottiePlayerLight
+        loop
+        animationData={lottieJson}
+        play
+        renderer="svg"
+      />
     </div>
-  );
+  )
 }
 
 export default App;
